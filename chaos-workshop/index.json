@@ -1,6 +1,8 @@
 {
   "title": "Chaos Workshop",
   "description": "Hands on chaos testing using a microservice-based application on Kubernetes.",
+  "difficulty": "Intermediate",
+  "time": "90 minutes",
   "details": {
       "steps": [
         {
