@@ -2,6 +2,7 @@
 mkdir /chaos-workshop
 git clone https://github.com/jyee/distributed-tracing-with-apm-workshop /chaos-workshop
 cd /chaos-workshop
+date > /chaos-workshop/lastrun.txt
 git fetch origin k8s-autodiscovery
 git checkout k8s-autodiscovery
 
