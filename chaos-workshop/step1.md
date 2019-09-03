@@ -10,7 +10,9 @@ Memebook is the amazing sofware service provided by MetricsPuppy. While Memebook
 
 (TODO: IMAGE HERE)
 
-In case you'd like to see the application code, it's available on [Github](https://github.com/jyee/memebook).
+You can view the Memebook application at https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+You can also view the application code on [Github](https://github.com/jyee/memebook).
 
 ## Monitoring first
 
