@@ -20,37 +20,30 @@ In order to do Chaos Engineering, you need to have monitoring in place. To start
 2. Go to [Integrations >> APIs](https://app.datadoghq.com/account/settings#api).
 3. Create your Kubernetes secret:
 
-   ```bash
-   kubectl create secret generic datadog-api --from-literal=token=<YOUR_DATADOG_API_KEY>
-   ```
+   `kubectl create secret generic datadog-api --from-literal=token=<YOUR_DATADOG_API_KEY>`{{copy HOST1}}
 
 Once you've added your Datadog API Key, you can start the Datadog Daemonset:
 
-```bash
-kubectl apply -f kubernetes/datadog-agent.yaml
-```
+`kubectl apply -f kubernetes/datadog-agent.yaml`{{execute HOST1}}
 
 Verify that the Datadog Agent daemonset has been applied:
 
-```bash
-kubectl get daemonset
-```
+`kubectl get daemonset`{{execute HOST1}}
 
 You should see a response similar to:
 
-```
+```bash
 NAME            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
 datadog-agent   1         1         1       1            1           <none>          23s
 ```
 
 Also verify that the daemonset pods are running:
 
-```bash
-kubectl get pod
-```
+`kubectl get pod`{{execute HOST1}}
+
 You should see a response similar to:
 
-```
+```bash
 NAME                  READY   STATUS    RESTARTS   AGE
 datadog-agent-hsmtr   1/1     Running   0          21s
 ```
@@ -63,12 +56,8 @@ Throughout this workshop, you'll need to run commands on your Kubernetes pods. I
 
 For example, to get more information about the Datadog Agent, you can run the `agent status` command on the Datadog Agent pod:
 
-```bash
-kubectl exec -ti <YOUR_DATADOG_POD_NAME> -- agent status | more
-```
+`kubectl exec -ti <YOUR_DATADOG_POD_NAME> -- agent status | more`{{copy HOST1}}
 
 Similarly you can get a bash shell prompt on the running pod by using:
 
-```bash
-kubectl exec -ti <YOUR_POD_NAME> -- bash
-```
+`kubectl exec -ti <YOUR_POD_NAME> -- bash`{{copy HOST1}}
