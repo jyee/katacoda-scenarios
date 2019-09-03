@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir /chaos-workshop
 cd /chaos-workshop
-git clone https://github.com/jyee/memebook.git .
+git clone https://github.com/jyee/memebook.git . &> error.txt
 date > lastrun.txt
 
 kubectl apply -f kubernetes/memebook.yaml
