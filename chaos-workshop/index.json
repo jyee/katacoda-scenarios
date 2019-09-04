@@ -16,12 +16,24 @@
           "courseData": "step1-background.sh"
         },
         {
-          "title": "Step 2",
+          "title": "Running experiments (pt 1)",
           "text": "step2.md"
         },
         {
-          "title": "Step 3",
+          "title": "Running experiments (pt 2)",
           "text": "step3.md"
+        },
+        {
+          "title": "Experiment 2",
+          "text": "step4.md"
+        },
+        {
+          "title": "Experiment 3",
+          "text": "step5.md"
+        },
+        {
+          "title": "Going further",
+          "text": "step6.md"
         }
       ],
       "finish": {
@@ -30,8 +42,7 @@
     },
     "environment": {
       "uilayout": "terminal-terminal",
-      "uimessage1": "Kubernetes terminal: Run kubectl commands here.",
-      "uimessage2": "Node terminal: Run commands that affect the host node here."
+      "uimessage1": "Wow. Such SRE. Much Chaos."
     },
     "backend": {
       "imageid": "datadog-kubernetes-cluster-running"

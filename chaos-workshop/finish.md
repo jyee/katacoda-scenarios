@@ -1,9 +1,28 @@
-# Adding Observability with Golang and Distributed Tracing
+# Recap
 
-As we've seen, distributed tracing is just one of many tools to help increase your visibility into the complex systems you deploy and manage every day.
+Thanks for making the Memebook more resilient and for being part of the MetricsPuppy SRE Team!
 
-It's one facet of a many faceted approach, to being able to reliable diagnose production systems and problems _before_ your customers notice.
+Unfortunately, it's come to our attention that the Memebook is not a viable product. :(
 
-I hope this lesson gives you some ideas for how you can add custom traces to your company's systems, and start building observability systems that fit your particular business and legacy software problems.
+Thankfully you never quit your real job! As you implment Chaos Engineering in your own organizations, following the framework will help ensure you're learning the most from your experiments.
 
-It's an exciting time to be in software development. Let's build systems we can all be proud of.
+### Before
+
+1. Schedule it.
+1. Pick tests.
+1. Make a hypothesis.
+1. Have a backup plan.
+1. Share!
+
+### During
+
+1. Take notes.
+1. Communicate.
+1. Monitor for incidents.
+
+### Afterward
+
+1. Create cards/tickets to track issues that need work.
+1. Write a brief summary & key lessons.
+1. Share!
+1. Celebrate!!

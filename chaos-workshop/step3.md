@@ -1,33 +1,20 @@
-# Instrumenting Kubernetes with the Datadog Agent
+## Running the experiment
 
-Let's start by viewing the Datadog Agent's configuration.
+When you run your experiments in real-world environments, it's important to keep sharing information. If your organization uses group chat tools such as Slack or Hipchat, use them to announce the start of experiments and maintain discussions. Also ensure that you're monitoring your production systems outside the scope of your tests. If other teams begin experiencing incidents, abort your testing to prevent confusion and avoid making the incidents worse.
 
-If we open the `datadog-agent.yaml`, we'll see that it's run as a DaemonSet. 
+## Take notes
 
-DaemonSets allow us to schedule pods that run once per node. The Datadog Agent container mounts volumes on each node, in order to inspect the pods running, along with any host level information like RAM or CPU usage.
+Remember to take notes as you run the experiment. There are a few tools in Datadog that can help:
 
-You can see this works by the `volumeMounts` section in our YAML. There we see all the directories that are mounted for the Agent to run, picking up both processes and Docker containers running on the system.
+- You can add status updates in the [Event Stream](https://app.datadoghq.com/event/stream) and use hashtags to tag them. For example, you can enter `Starting chaos experiment. Killing memebook process. #env:memebook #chaos-workshop`. In your dashboards, you can then overlay these events using the tags `env:memebook` and `chaos-workshop`.
+- [Add graphs and logs to your notebooks](https://docs.datadoghq.com/graphing/notebooks/) with independent times. By default, graphs and logs are set to use the global time set in the upper right of the page. You can set the time for graphs by clicking and dragging to select a time range on the graph. You can also set the time for graphs and log streams by clicking the clock icon for the cell, then setting the date and time range manually.
+- The [annotation tool](https://www.datadoghq.com/blog/real-time-graph-annotations/) in dashboards allows you to highlight portions of a graph and make comments. If you're using a group chat tool, such as Slack or Hipchat, you can send annotations to your chat, then export the chat log as a record of your experiment.
 
-You'll notice the Datadog DaemonSet also runs the APM Agent, opening up a port on `8126`, allowing us to send our traces downstream to the Agent.
+## Afterward
 
-Along with the Traces port, we open port `8125` for UDP and DogstatsD. DogstatsD allows us to send custom metrics, for things we may want to see.
+When you've completed your experiments:
 
-Popular custom metrics are things like user logins per minute, failed login attempts, orders placed, orders completed, etc. Custom metrics allow you to build dashboards more relevant to the systems of your business.
-
-Just as we did in our `docker-compose`, we set a `env` tag in our environment variables. 
-
-Setting this tag works just as before, allowing us to define the environment within which we want all of our servers to live together in Datadog.
-
-This way, we can separate out our infrastructure into units that make sense for us. Think of the difference between staging and production. Or maybe you have different regions your data lives within. Setting an `env` tag allows you to view logically separate infrastructures within Datadog.
-
-Let's take a moment now to see what we're getting in Datadog, before we jump into seeing how our legacy systems have been instrumented.
-
-The first place I like to look when becoming familiar with a new application is the Service Map within Datadog.
-
-This shows us a high level overview of the systems running within our application. From here, we can click through and get a feel for the total number of requests coming through our application, any databases, and the flow of requests.
-
-Next up, I like to hop in to Live Tail for Logs, and see what requests, if any, are coming through my system.
-
-Finally, I can click into the Service List, and drill down on latencies across all of my services, looking to see if there are any major bottlenecks that stand out at a glance.
-
-In this way, we can start to get a quick handle of how our systems are behaving, what endpoints are experiencing what level of load, and start understanding what dashboards may be worth building.
+1. Create cards/tickets to track issues that need work.
+1. Write a brief summary & key lessons.
+1. **Share!**
+1. **Celebrate!!**
