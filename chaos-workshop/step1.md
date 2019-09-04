@@ -1,28 +1,12 @@
-# Hello new SREs!
+In order to do Chaos Engineering, you must have monitoring in place. Monitoring is how you'll verify your tests, evaluate your results, and determine next-steps to improve your systems. Additionally, Chaos Engineering can help you improve your monitoring by exposing areas of your system that are insufficiently monitored.
 
-Welcome to MetricsPuppy, Inc. We're excited to have you join our company!
+The terminals on the right provide access to your infrastructure. The terminal on the top is the Kubernetes Master and is where you can run the `kubectl` command to perform actions. From the MaThe terminal on the bottom is the Kubernetes Node—the host machine that's running both the Kubernetes software and the Memebook application running inside Kubernetes.
 
-Say hello to your new colleague sitting next to you. Together, you'll be the core of our SRE team to make our Memebook app more resilient!
+## Installing Datadog
 
-## I can haz appz?
+To start, log into your [Datadog](https://app.datadoghq.com) account and navigate to the [APIs page](https://app.datadoghq.com/account/settings#api) under the Integrations menu. Then add your API Key as a Kubernetes secret:
 
-Memebook is the amazing sofware service provided by MetricsPuppy. While Memebook might seem like an ordinary guestbook sample application, it's way better! Memebook has additional microservices that translate your guestbook comments into lolcat and add amazing photos of dogs. Here's a basic architecture diagram:
-
-(TODO: IMAGE HERE)
-
-You can view the Memebook application at https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
-
-You can also view the application code on [Github](https://github.com/jyee/memebook).
-
-## Monitoring first
-
-In order to do Chaos Engineering, you need to have monitoring in place. To start monitoring the Memebook application, you'll need to add your [Datadog API Key](https://app.datadoghq.com/account/settings#api) as a kubernetes secret:
-
-1. Log into Datadog using the Datadog credentials for the workshop.
-2. Go to [Integrations >> APIs](https://app.datadoghq.com/account/settings#api).
-3. Create your Kubernetes secret:
-
-   `kubectl create secret generic datadog-api --from-literal=token=<YOUR_DATADOG_API_KEY>`{{copy HOST1}}
+`kubectl create secret generic datadog-api --from-literal=token=<YOUR_API_KEY>`{{copy HOST1}}
 
 Once you've added your Datadog API Key, you can start the Datadog Daemonset:
 
@@ -39,7 +23,7 @@ NAME            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECT
 datadog-agent   1         1         1       1            1           <none>          23s
 ```
 
-Also verify that the daemonset pods are running:
+Verify that the daemonset pods are running:
 
 `kubectl get pod`{{execute HOST1}}
 

@@ -13,7 +13,3 @@ kubectl apply -f kubernetes/doggo.yaml
 kubectl apply -f kubernetes/lolcat.yaml
 kubectl apply -f kubernetes/redis-master.yaml
 kubectl apply -f kubernetes/redis-slave.yaml
-
-# Give the application some time to start, then generate traffic.
-sleep 30
-kubectl apply -f kubernetes/traffic_generator.yaml

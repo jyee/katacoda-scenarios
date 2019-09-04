@@ -4,10 +4,16 @@
   "difficulty": "Intermediate",
   "time": "90 minutes",
   "details": {
+      "intro": {
+        "text": "intro.md",
+        "code": "intro-foreground.sh",
+        "courseData": "intro-background.sh"
+      },
       "steps": [
         {
-          "title": "Step 1",
-          "text": "step1.md"
+          "title": "Monitoring first",
+          "text": "step1.md",
+          "courseData": "step1-background.sh"
         },
         {
           "title": "Step 2",
@@ -18,20 +24,14 @@
           "text": "step3.md"
         }
       ],
-      "intro": {
-        "text": "intro.md",
-        "code": "foreground.sh",
-        "courseData": "background.sh"
-      },
       "finish": {
         "text": "finish.md"
       }
     },
     "environment": {
       "uilayout": "terminal-terminal",
-      "uieditorpath": "/chaos-workshop",
-      "showdashboard": true,
-      "dashboards": [{"name": "IoT Project", "port": 30001}]
+      "uimessage1": "Kubernetes terminal: Run kubectl commands here.",
+      "uimessage2": "Node terminal: Run commands that affect the host node here."
     },
     "backend": {
       "imageid": "datadog-kubernetes-cluster-running"
