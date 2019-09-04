@@ -1,6 +1,6 @@
 In order to do Chaos Engineering, you must have monitoring in place. Monitoring is how you'll verify your tests, evaluate your results, and determine next-steps to improve your systems. Additionally, Chaos Engineering can help you improve your monitoring by exposing areas of your system that are insufficiently monitored.
 
-The terminals on the right provide access to your infrastructure. The terminal on the top is the Kubernetes Master and is where you can run the `kubectl` command to perform actions. From the MaThe terminal on the bottom is the Kubernetes Node—the host machine that's running both the Kubernetes software and the Memebook application running inside Kubernetes.
+The terminals on the right provide access to your infrastructure. The terminal on the top is the Kubernetes Master and is where you can run the `kubectl` command to perform actions. The terminal on the bottom is the Kubernetes Node—the host machine that's running both the Kubernetes software and the Memebook application running inside Kubernetes.
 
 ## Installing Datadog
 
@@ -35,15 +35,3 @@ datadog-agent-hsmtr   1/1     Running   0          21s
 ```
 
 Also verify that you are able to see Memebook reporting metrics in Datadog.
-
-## More Kubernetes
-
-Throughout this workshop, you'll need to run commands on your Kubernetes pods. If you are unfamiliar with Kubernetes, an easy way to run commands is by using `kubectl exec`.
-
-For example, to get more information about the Datadog Agent, you can run the `agent status` command on the Datadog Agent pod:
-
-`kubectl exec -ti <YOUR_DATADOG_POD_NAME> -- agent status | more`{{copy HOST1}}
-
-Similarly you can get a bash shell prompt on the running pod by using:
-
-`kubectl exec -ti <YOUR_POD_NAME> -- bash`{{copy HOST1}}

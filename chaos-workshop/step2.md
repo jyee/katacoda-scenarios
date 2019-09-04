@@ -1,6 +1,8 @@
 ## Planning
 
-Chaos Engineering, like all engineering practices, are not random. Prior to running your Chaos test or experiment, you should perform the following tasks:
+Contrary to the Chaos Monkey myth, Chaos Engineering is *not* about randomly destroying services or infrastructure. Planning and following a process is important.
+
+Prior to running your Chaos test or experiment, you should perform the following tasks:
 
 1. **Schedule it.** You need to ensure your tests will not interfere with important customer events (e.g. holiday sales) or production work (e.g. new feature deployments).
 1. **Pick tests.** Determine what you will do to induce failure. Write down your planned actions so that you (and others) can repeat them in the future. Start with easy tests before moving on to more complex ones.
