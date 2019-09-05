@@ -6,6 +6,7 @@
   "details": {
       "intro": {
         "text": "intro.md",
+        "code": "intro-foreground.sh",
         "courseData": "intro-background.sh"
       },
       "steps": [
@@ -41,14 +42,7 @@
       }
     },
     "environment": {
-      "uilayout": "terminal",
-      "terminals": [
-        {
-          "name": "Node",
-          "target": "host0",
-          "command": "echo 'hello' > /root/hello"
-        }
-      ],
+      "uilayout": "terminal-terminal",
       "uimessage1": "Wow. Such SRE. Much Chaos."
     },
     "backend": {
