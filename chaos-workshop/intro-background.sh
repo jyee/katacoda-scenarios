@@ -1,6 +1,4 @@
 #!/bin/bash
-# Ensure we're running a new build (can look at this to verify)
-date > lastrun.txt
 
 # Clone the Memebook git repo (output to error.txt if something goes wrong)
 git clone https://github.com/jyee/memebook.git 2> error.txt
