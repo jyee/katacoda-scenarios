@@ -45,7 +45,7 @@
       "terminals": [
         {
           "name": "Node",
-          "target": "host01",
+          "target": "host0",
           "command": "echo 'hello' > /root/hello"
         }
       ],
