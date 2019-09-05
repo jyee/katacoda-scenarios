@@ -51,7 +51,7 @@
         {
           "name": "Node",
           "target": "node01",
-          "command": "echo 'hello'"
+          "command": "echo 'hello' > /root/hello"
         }
       ],
       "uimessage1": "Wow. Such SRE. Much Chaos."
