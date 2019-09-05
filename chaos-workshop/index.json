@@ -29,7 +29,8 @@
         },
         {
           "title": "Leveling up",
-          "text": "step5.md"
+          "text": "step5.md",
+          "courseData": "step5-background.sh"
         },
         {
           "title": "Going further",
