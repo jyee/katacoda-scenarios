@@ -12,5 +12,5 @@ kubectl apply -f kubernetes/lolcat.yaml
 kubectl apply -f kubernetes/redis-master.yaml
 kubectl apply -f kubernetes/redis-slave.yaml
 
-ssh node01 -c "apt-get update &&
-  apt-get install -y golang-go stress-ng"
+ssh -oStrictHostKeyChecking=no node01 -c "apt-get update &&
+  apt-get -y install golang-go stress-ng"
