@@ -44,13 +44,8 @@
       "uilayout": "terminal",
       "terminals": [
         {
-          "name": "Master",
-          "target": "master",
-          "command": "(kubectl completion bash) >> /root/.bashrc"
-        },
-        {
           "name": "Node",
-          "target": "node01",
+          "target": "host01",
           "command": "echo 'hello' > /root/hello"
         }
       ],
