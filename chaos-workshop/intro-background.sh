@@ -16,6 +16,8 @@ mv memebook/kubernetes . && rm -r memebook
 
 echo "Node01 update apt" >> status.txt
 ssh -oStrictHostKeyChecking=no node01 "apt-get update" &> ssh.txt
+echo "Node01 apt install stress-ng" >> status.txt
+ssh -oStrictHostKeyChecking=no node01 "apt-get -y install stress-ng" &> ssh.txt
 
 #echo "Installing tools on host node (go)" >> status.txt
 #ssh -oStrictHostKeyChecking=no node01 "apt-get update && apt-get -y install golang-go stress-ng"
