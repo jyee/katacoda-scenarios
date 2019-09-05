@@ -6,7 +6,6 @@
   "details": {
       "intro": {
         "text": "intro.md",
-        "code": "intro-foreground.sh",
         "courseData": "intro-background.sh"
       },
       "steps": [
@@ -43,6 +42,18 @@
     },
     "environment": {
       "uilayout": "terminal-terminal",
+      "terminals": [
+        {
+          "name": "Master",
+          "target": "master",
+          "command": "(kubectl completion bash) >> /root/.bashrc"
+        },
+        {
+          "name": "Node",
+          "target": "node01",
+          "command": "echo 'hello'"
+        }
+      ],
       "uimessage1": "Wow. Such SRE. Much Chaos."
     },
     "backend": {
