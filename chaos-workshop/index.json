@@ -41,8 +41,12 @@
       }
     },
     "environment": {
-      "uilayout": "terminal-terminal",
-      "uimessage1": "Wow. Such SRE. Much Chaos."
+      "uilayout": "terminal",
+      "uimessage1": "Wow. Such SRE. Much Chaos.",
+      "terminals": [{
+        "name": "K8s Node",
+        "command": "ssh -o StrictHostKeyChecking=no root@node01"
+      }]
     },
     "backend": {
       "imageid": "datadog-kubernetes-cluster-running"
