@@ -27,7 +27,9 @@ For this experiment, you have a couple additional tools available to you on the 
 - [stress-ng](https://wiki.ubuntu.com/Kernel/Reference/stress-ng) is a stress testing tool that covers CPU, memory, I/O, and more. In addition to the [info page](https://wiki.ubuntu.com/Kernel/Reference/stress-ng), you can also reference the [man page](https://manpages.ubuntu.com/manpages/artful/man1/stress-ng.1.html).
 - [Comcast](https://github.com/tylertreat/comcast) is a tool that simulates poor network conditions, including bandwidth capping, latency, and dropped packets.
 
-To access the Kubernetes nodes, ssh to it: `ssh root@node01`{{execute T2}}
+To access the Kubernetes nodes, ssh to it (clicking below will open a new terminal tab):
+
+`ssh root@node01`{{execute T2}}
 
 ### Picking tests
 
