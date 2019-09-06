@@ -27,7 +27,7 @@ For this experiment, you have a couple additional tools available to you on the 
 - [stress-ng](https://wiki.ubuntu.com/Kernel/Reference/stress-ng) is a stress testing tool that covers CPU, memory, I/O, and more. In addition to the [info page](https://wiki.ubuntu.com/Kernel/Reference/stress-ng), you can also reference the [man page](https://manpages.ubuntu.com/manpages/artful/man1/stress-ng.1.html).
 - [Comcast](https://github.com/tylertreat/comcast) is a tool that simulates poor network conditions, including bandwidth capping, latency, and dropped packets.
 
-To access the Kubernetes nodes, ssh to it: `ssh root@node01`{{execute HOST02}}
+To access the Kubernetes nodes, ssh to it: `ssh root@node01`{{execute T2}}
 
 ### Picking tests
 
@@ -37,17 +37,17 @@ When degrading your environment remember to start small, then increase your degr
 
 For example, if you were targeting the host node's memory, you can start by launching 4 virtual memory stressors to consume 1GB each for 3 minutes:
 
-`stress-ng --vm 4 --vm-bytes 1G --timeout 3m`{{execute HOST02}}
+`stress-ng --vm 4 --vm-bytes 1G --timeout 3m`{{execute T2}}
 
 You can then increase the number of stressors and/or the amount of memeory they consume:
 
-`stress-ng --vm 8 --vm-bytes 2GB --timeout 3m`{{execute HOST02}}
+`stress-ng --vm 8 --vm-bytes 2GB --timeout 3m`{{execute T2}}
 
 **Latency Attack Example**
 
 If you were experimenting with latency increases, you could start small by inducing 100ms of latency:
 
-`comcast --device=weave --latency=100`{{execute HOST02}}
+`comcast --device=weave --latency=100`{{execute T2}}
 
 You can then increase the latency, throttle bandwidth, or add packet loss to further degrade the network.
 
