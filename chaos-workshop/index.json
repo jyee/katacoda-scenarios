@@ -41,9 +41,7 @@
     },
     "environment": {
       "uilayout": "terminal",
-      "uimessage1": "Wow. Such SRE. Much Chaos.",
-      "showdashboard": true,
-      "dashboards": [{"name": "Port 80", "port": 80}]
+      "uimessage1": "Wow. Such SRE. Much Chaos."
     },
     "backend": {
       "imageid": "datadog-kubernetes-cluster-running"
