@@ -1,20 +1,25 @@
-When you run your experiments in real-world environments, it's important to keep sharing information. If your organization uses group chat tools such as Slack or Hipchat, use them to announce the start of experiments and maintain discussions. Also ensure that you're monitoring your production systems outside the scope of your tests. If other teams begin experiencing incidents, abort your testing to prevent confusion and avoid making the incidents worse.
+To run this experiment we'll be testing the resiliency of the Memebook service. We want to answer the following questions:
 
-## Take notes
+- Does the service restart without manual intervention?
+- Can we monitor the service failure and restarts in Datadog?
 
-Remember to take notes as you run the experiment. There are a few tools in Datadog that can help:
+## Deleting the pod
 
-- You can add status updates in the [Event Stream](https://app.datadoghq.com/event/stream) and use hashtags to tag them. For example, you can enter:
-  `Starting chaos experiment. Killing memebook process. #env:memebook #chaos-workshop`
-  In your dashboards, you can then overlay these events using the tags `env:memebook` and `chaos-workshop`.
-- [Add graphs and logs to your notebooks](https://docs.datadoghq.com/graphing/notebooks/) with independent times. By default, graphs and logs are set to use the global time set in the upper right of the page. You can set the time for graphs by clicking and dragging to select a time range on the graph. You can also set the time for graphs and log streams by clicking the clock icon for the cell, then setting the date and time range manually.
-- The [annotation tool](https://www.datadoghq.com/blog/real-time-graph-annotations/) in dashboards allows you to highlight portions of a graph and make comments. If you're using a group chat tool, such as Slack or Hipchat, you can send annotations to your chat, then export the chat log as a record of your experiment.
+First get the name of of the Memebook pod by listing the running pods:
 
-## Afterward
+`kubectl get pods`{{execute}}
 
-When you've completed your experiments:
+You should see a number of pods including the Memebook. For example:
 
-1. Create cards/tickets to track issues that need work.
-1. Write a brief summary & key lessons.
-1. **Share!**
-1. **Celebrate!!**
+```bash
+NAME                            READY     STATUS              RESTARTS   AGE
+memebook-74d88497df-6wcrn       1/1       Running             0          23s
+```
+
+You can use that name to delete the pod. For example:
+
+`kubectl delete pod memebook-74d88497df-6wcrn`{{copy}}
+
+Substitute your Memebook pod name and try it. After you delete the Memebook pod, get a list of the running pods.
+
+What pods are running? Did the Memebook pod restart?

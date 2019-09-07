@@ -1,7 +1,3 @@
-In order to do Chaos Engineering, you must have monitoring in place. Monitoring is how you'll verify your tests, evaluate your results, and determine next-steps to improve your systems. Additionally, Chaos Engineering can help you improve your monitoring by exposing areas of your system that are insufficiently monitored.
-
-## Installing Datadog
-
 To start, log into your [Datadog](https://app.datadoghq.com) account and navigate to the [APIs page](https://app.datadoghq.com/account/settings#api) under the Integrations menu. Then add your API Key as a Kubernetes secret:
 
 `kubectl create secret generic datadog-api --from-literal=token=<YOUR_API_KEY>`{{copy}}

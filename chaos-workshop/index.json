@@ -10,29 +10,33 @@
       },
       "steps": [
         {
-          "title": "Monitoring first",
+          "title": "Running Memebook",
           "text": "step1.md",
           "courseData": "step1-background.sh"
         },
         {
-          "title": "Running experiments (pt 1)",
+          "title": "Installing Datadog",
           "text": "step2.md"
         },
         {
-          "title": "Running experiments (pt 2)",
+          "title": "Creating a plan",
           "text": "step3.md"
         },
         {
-          "title": "Chaos levels",
+          "title": "Run your experiment",
           "text": "step4.md"
         },
         {
-          "title": "Leveling up",
+          "title": "Chaos levels",
           "text": "step5.md"
         },
         {
-          "title": "Going further",
+          "title": "Leveling up",
           "text": "step6.md"
+        },
+        {
+          "title": "Going further",
+          "text": "step7.md"
         }
       ],
       "finish": {
