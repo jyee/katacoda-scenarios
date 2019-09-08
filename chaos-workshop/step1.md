@@ -20,4 +20,4 @@ If you receive an error message `The connection to the server localhost:8080 was
 
 If you can see the Kubernetes nodes, but are not seeing any pods, apply the manifests in the `kubernetes` directory:
 
-`kubectl apply -f kubernetes/`{execute}
+`kubectl apply -f kubernetes/`{{execute}}
