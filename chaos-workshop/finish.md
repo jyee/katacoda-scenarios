@@ -1,6 +1,6 @@
 # Recap
 
-Thanks for making the Memebook more resilient and for being part of the MetricsPuppy SRE Team!
+Thanks for making the Memebook more resilient and for being part of the MetricsPuppy Chaos Team!
 
 Unfortunately, it's come to our attention that the Memebook is not a viable product. :(
 

@@ -4,4 +4,4 @@ In this workshop, you'll learn more about Chaos Engineering by implementing Chao
 
 ## Ready, steady, GO!
 
-Welcome to the MetricsPuppy SRE team! Let's Go!
+Welcome to the MetricsPuppy Chaos team! Let's Go!

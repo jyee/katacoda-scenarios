@@ -1,7 +1,5 @@
 Congratulations, you've completely Chaos level 2!
 
-How did the Memebook respond to your Chaos? What new tasks should be created from your experiment? Let's take a moment to share those with the group.
-
 For the next experiment, you have a couple additional tools available to you on the Kubernetes node.
 
 - [stress-ng](https://wiki.ubuntu.com/Kernel/Reference/stress-ng) is a stress testing tool that covers CPU, memory, I/O, and more. In addition to the [info page](https://wiki.ubuntu.com/Kernel/Reference/stress-ng), you can also reference the [man page](https://manpages.ubuntu.com/manpages/artful/man1/stress-ng.1.html).
@@ -39,7 +37,7 @@ Comcast and stress-ng are just a couple tools that help with testing, there are 
 
 ## Run your experiment!
 
-Did you get some good test ideas? Start a new [Datadog Notebook](https://app.datadoghq.com/notebook) and write them into a plan with your SRE partner:
+Did you get some good test ideas? Start a new [Datadog Notebook](https://app.datadoghq.com/notebook) and write them into a plan with your Chaos partner:
 
 1. Schedule it.
 1. Pick tests.
