@@ -2,6 +2,8 @@
 
 # Clone the Memebook git repo (output to error.txt if something goes wrong)
 git clone https://github.com/jyee/memebook.git
+# Use nodeport variant for Katacoda
+git checkout jyee/nodeport
 
 # Move the Kubernetes bits out of the project, then delete the project (we don't need the code).
 echo "Getting Memebook Kubernetes manifests" >> status.txt
