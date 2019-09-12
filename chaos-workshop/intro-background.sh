@@ -20,6 +20,12 @@ ssh -oStrictHostKeyChecking=no node01 "export GOPATH=/root/gopath && go get gith
 # This is a Katacoda tool.
 launch.sh
 
+echo "Adding Katacoda Cloud Provider" >> status.txt
+KCP="kubernetes/katacoda-cloud-provider.yaml"
+curl --output "$KCP" --location https://gist.githubusercontent.com/BenHall/2ce101afe54e664d2c4c5f2d379410ff/raw/0e767476deacd4a46ddd36a1c953f9b241d58af3/katacoda-cloud-provider.yaml
+sed -i `s/HOSTIP/[[HOST_IP]]/g` "$KCP"
+kubectl apply -f "$KCP"
+
 echo "Applying Kubernetes manifests" >> status.txt
 kubectl apply -f kubernetes/memebook.yaml
 kubectl apply -f kubernetes/doggo.yaml
