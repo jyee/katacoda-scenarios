@@ -16,7 +16,7 @@ You can also see the pods that are running:
 
 Once the memebook is running, you can interact with it at:
 
-https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com/
 
 ### Troubleshooting
 
