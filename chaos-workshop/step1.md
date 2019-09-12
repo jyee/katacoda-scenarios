@@ -14,6 +14,10 @@ You can also see the pods that are running:
 
 `kubectl get pods`{{execute}}
 
+Once the memebook is running, you can interact with it at:
+
+https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/
+
 ### Troubleshooting
 
 If you receive an error message `The connection to the server localhost:8080 was refused - did you specify the right host or port?` it means that Kubernetes has not started. You can refresh the page in your browser to start a new session or let a staff member know and we can help troubleshoot.
